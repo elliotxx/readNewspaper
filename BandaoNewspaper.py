@@ -72,7 +72,7 @@ def download(url, file_path='tmp'):
 def getDate():
     '''获取前一天的日期'''
     now_time = datetime.datetime.now()
-    yes_time = now_time + datetime.timedelta(days=-2)
+    yes_time = now_time + datetime.timedelta(days=-1)
     yes_time_nyr = yes_time.strftime('%Y%m%d')
     return yes_time_nyr
 
