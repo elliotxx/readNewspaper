@@ -1,6 +1,11 @@
 ## readNewspaper
 自动获取电子版报纸，方便每天阅读
 
+## 使用方式
+```python
+python BandaoNewspaper.py
+```
+
 ## 目前可以获取的报纸
 * 《半岛都市报》  
 报纸首页：http://bddsb.bandao.cn/
