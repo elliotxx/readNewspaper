@@ -146,11 +146,15 @@ def main():
     per_page_list = []
     host = 'http://bddsb.bandao.cn/pc/bddsb'
     index_url = '%s/%s/PageArticleIndexBT.htm'%(host, date)
-    items = Parse(index_url, '//div[@class="ban"]//a[1]')
+    # items = Parse(index_url, '//div[@class="ban"]//a[1]')
+    items = Parse(index_url, '//div[@class="banmianlist_box"]/a[@href]')
     page_sum = len(items)
     print 'The latest newspaper(%s) is a total of %d pages...'%(date, page_sum)
     for item in items:
-        url = '%s%s'%(host, item.attrib['href'].strip('.'))
+        # url = '%s/%s/%s'%(host, date, item.attrib['href'].strip('.'))
+        paper_no = item.text.split('[')[-1].split(']')[0].strip()
+        url = '%s/%s/%s.pdf'%(host, date, paper_no)
+        print url
         per_page_list.append(url)
 
 
@@ -184,3 +188,4 @@ if __name__ == '__main__':
         main()
     except Exception, e:
         print e
+    os.system('pause')
