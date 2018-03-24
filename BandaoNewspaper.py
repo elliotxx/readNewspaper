@@ -154,7 +154,7 @@ def main():
         # url = '%s/%s/%s'%(host, date, item.attrib['href'].strip('.'))
         paper_no = item.text.split('[')[-1].split(']')[0].strip()
         url = '%s/%s/%s.pdf'%(host, date, paper_no)
-        print url
+        # print url
         per_page_list.append(url)
 
 
