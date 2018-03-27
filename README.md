@@ -25,3 +25,9 @@ python BandaoNewspaper.py
 ## 参考资料
 * 在windows下安装PyPdf2，将文件夹中的pdf文件合成为一个pdf文件  
 http://blog.csdn.net/andy_blogs/article/details/78041679
+
+* Python SMTP 发送带附件电子邮件  
+https://blog.csdn.net/zm2714/article/details/7993732
+
+* python+smtp发送邮件附件问题  
+https://segmentfault.com/q/1010000009102883
